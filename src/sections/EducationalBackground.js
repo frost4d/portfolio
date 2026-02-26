@@ -42,6 +42,9 @@ const EducationalBackground = () => {
         alt="Graduation"
         sx={{
           width: { xs: '100%', md: 600 },
+          maxWidth: '100%',
+          height: 'auto',
+          objectFit: 'cover',
           boxShadow: '0 10px 25px rgba(0,0,0,0.15)',
           transition: 'transform 0.3s ease-in-out',
           '&:hover': {

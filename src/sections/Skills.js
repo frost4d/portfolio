@@ -7,7 +7,7 @@ const skills = [
   { category: 'Databases & Dev Tools', items: ['mysql.png', 'firebase.png', 'Github.png'] },
   { category: 'Design Tools', items: ['figma.png', 'Canva.png', 'Photoshop.png'] },
   { category: 'Cloud Platforms & Engineering', items: ['APC.png', 'AmicusAttorney.png', 'Office365.png', 'AbacusNext.png', 'PartnerCenter.png'] },
-  { category: 'Customer Support Tools', items: ['customerservice.png', 'zendesk.png', 'gotoassist.png', 'MSTeams.png'] },
+  { category: 'Customer Support Tools', items: ['Zendesk.png', 'gotoassist.png', 'MSTeams.png'] },
 ];
 
 const Skills = () => {
