@@ -17,7 +17,7 @@ import DeviceSpecification from './sections/DeviceSpecification';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename= "/portfolio">
     <Box sx={{ overflow: 'hidden' }}>
       <Navbar />
       <Routes>
