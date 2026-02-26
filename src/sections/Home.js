@@ -75,7 +75,8 @@ const Home = () => {
           <Button variant="contained" 
             color="warning" 
             component="a"
-            href="/resume/James_Patrick_Tsung_Resume.pdf"
+            // href="/resume/James_Patrick_Tsung_Resume.pdf"
+            href={process.env.PUBLIC_URL + "/resume/James_Patrick_Tsung_Resume.pdf"}
             download="James_Patrick_Tsung_Resume.pdf">
             Download my Resume
           </Button>
@@ -160,7 +161,8 @@ const Home = () => {
           {/* Profile Image */}
           <Box
             component="img"
-            src="/assets/mypic1.png"
+            // src="/assets/mypic1.png"
+            src={process.env.PUBLIC_URL + "/assets/mypic1.png"}
             alt="James"
             sx={{
               width: '100%',

@@ -4,7 +4,6 @@ import { Box } from '@mui/material';
 import Navbar from './components/Navbar';
 import Home from './sections/Home';
 import About from './sections/About';
-import Projects from './sections/Projects';
 import Contact from './sections/Contact';
 import Footer from './components/Footer';
 import Skills from './sections/Skills';
@@ -27,7 +26,6 @@ function App() {
             <Home />
             <About />
             <Skills />
-            {/* <Projects /> */}
             <WorkExperience />
             <EducationalBackground />
             <DeviceSpecification/>
