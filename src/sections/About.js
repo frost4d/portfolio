@@ -45,7 +45,7 @@ const About = () => {
         {/* Profile Image */}
         <Box
           component="img"
-          src="/assets/mypic2.png"
+          src={process.env.PUBLIC_URL + "/assets/mypic2.png"}
           alt="James Profile"
           sx={{
             width: { xs: '100%', md: 600 },

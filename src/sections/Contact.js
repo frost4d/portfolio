@@ -66,7 +66,8 @@ const Contact = () => {
         {/* Image Section */}
         <Box
           component="img"
-          src="/assets/mypic4.png"
+          // src="/assets/mypic4.png"
+          src={process.env.PUBLIC_URL + "/assets/mypic4.png"}
           alt="Contact Illustration"
           sx={{
             width: { xs: '100%', md: 640 },

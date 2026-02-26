@@ -3,11 +3,11 @@ import { Box } from "@mui/material";
 import Tilt from "react-parallax-tilt";
 
 const images = [
-  "/assets/vivobook.png",
-  "/assets/vivobook2.png",
-  "/assets/vivobook3.png",
-  "/assets/vivobook4.png",
-  "/assets/vivobook5.png",
+  process.env.PUBLIC_URL + "/assets/vivobook.png",
+  process.env.PUBLIC_URL + "/assets/vivobook2.png",
+  process.env.PUBLIC_URL + "/assets/vivobook3.png",
+  process.env.PUBLIC_URL + "/assets/vivobook4.png",
+  process.env.PUBLIC_URL + "/assets/vivobook5.png",
 ];
 
 const LaptopGallery = () => {

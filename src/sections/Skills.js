@@ -64,7 +64,8 @@ const Skills = () => {
                     <Box
                       key={idx}
                       component="img"
-                      src={`/assets/${img}`}
+                      // src={`/assets/${img}`}
+                      src={process.env.PUBLIC_URL + `/assets/${img}`}
                       alt={img.split('.')[0]}
                       sx={{
                         width: 350,

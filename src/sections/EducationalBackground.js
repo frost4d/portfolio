@@ -37,7 +37,8 @@ const EducationalBackground = () => {
       {/* Graduation Image */}
       <Box
         component="img"
-        src="/assets/gradpic.png"
+        // src="/assets/gradpic.png"
+        src={process.env.PUBLIC_URL + "/assets/gradpic.png"}
         alt="Graduation"
         sx={{
           width: { xs: '100%', md: 600 },
