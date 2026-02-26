@@ -4,7 +4,7 @@ import './Skills.css';
 
 const skills = [
   { category: 'Web Development', items: ['javascript.png', 'React.png', 'nodejs.png', 'laravel.png', 'bootstrap.png', 'css.png', 'chakraui.png', 'materialui.png'] },
-  { category: 'Databases & Dev Tools', items: ['mysql.png', 'firebase.png', 'Github.png'] },
+  { category: 'Databases & Dev Tools', items: ['mysql.png', 'firebase.png', 'GitHub.png'] },
   { category: 'Design Tools', items: ['figma.png', 'Canva.png', 'Photoshop.png'] },
   { category: 'Cloud Platforms & Engineering', items: ['APC.png', 'AmicusAttorney.png', 'Office365.png', 'AbacusNext.png', 'PartnerCenter.png'] },
   { category: 'Customer Support Tools', items: ['Zendesk.png', 'gotoassist.png', 'MSTeams.png'] },
