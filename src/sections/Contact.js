@@ -45,7 +45,8 @@ const Contact = () => {
       id= "contact"
       sx={{
         minHeight: '100vh',
-        backgroundColor: '#f5f7fa',
+        background: '#020617', 
+        color: '#fff',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -85,7 +86,9 @@ const Contact = () => {
             width: '100%',
             maxWidth: 900,
             boxShadow: '0 8px 30px rgba(0,0,0,0.1)',
-            background: 'white',
+            background: 'rgba(255,255,255,0.03)',
+            backdropFilter: 'blur(10px)',
+            color: '#b8d6ff'
           }}
         >
           <Typography
@@ -94,8 +97,11 @@ const Contact = () => {
             sx={{
               fontWeight: 'bold',
               textAlign: 'center',
-              color: '#333',
+              color: '#fff',
               mb: 4,
+              background: 'linear-gradient(90deg, #38bdf8, #818cf8)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
             }}
           >
             Contact Me
@@ -162,9 +168,41 @@ const Contact = () => {
                   gap: 3,
                 }}
               >
-                <TextField name="user_name" label="Name" fullWidth required />
-                <TextField name="user_email" label="Email" type="email" fullWidth required />
-                <TextField name="subject" label="Subject" fullWidth required />
+                <TextField name="user_name" label="Name" fullWidth required InputProps={{
+    style: { color: '#fff' }, // input text color
+  }}
+  InputLabelProps={{
+    style: { color: '#bbb' }, // label color (placeholder)
+  }}
+  sx={{
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': { borderColor: 'rgba(255,255,255,0.3)' }, // border color
+      '&:hover fieldset': { borderColor: '#38bdf8' },
+      '&.Mui-focused fieldset': { borderColor: '#818cf8' },
+    },
+  }}/>
+                <TextField name="user_email" label="Email" type="email" fullWidth required InputProps={{ style: { color: '#fff' } }}
+  InputLabelProps={{ style: { color: '#bbb' } }}
+  sx={{
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': { borderColor: 'rgba(255,255,255,0.3)' },
+      '&:hover fieldset': { borderColor: '#38bdf8' },
+      '&.Mui-focused fieldset': { borderColor: '#818cf8' },
+    },
+  }}/>
+                <TextField name="subject" label="Subject" fullWidth required InputProps={{
+    style: { color: '#fff' },
+  }}
+  InputLabelProps={{
+    style: { color: '#bbb' },
+  }}
+  sx={{
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': { borderColor: 'rgba(255,255,255,0.3)' },
+      '&:hover fieldset': { borderColor: '#38bdf8' },
+      '&.Mui-focused fieldset': { borderColor: '#818cf8' },
+    },
+  }}/>
                 <TextField
                   name="message"
                   label="Message"
@@ -172,6 +210,15 @@ const Contact = () => {
                   rows={4}
                   fullWidth
                   required
+                  InputProps={{ style: { color: '#fff' } }}
+  InputLabelProps={{ style: { color: '#bbb' } }}
+  sx={{
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': { borderColor: 'rgba(255,255,255,0.3)' },
+      '&:hover fieldset': { borderColor: '#38bdf8' },
+      '&.Mui-focused fieldset': { borderColor: '#818cf8' },
+    },
+  }}
                 />
 
                 <Button
@@ -217,7 +264,7 @@ const Contact = () => {
                   Get in Touch
                 </Typography>
 
-                <Typography variant="body1">
+                <Typography variant="body1" color='#fff'>
                   📧 <strong>Email:</strong>{' '}
                   <Link
                     href="mailto:jamespatricktsung1@gmail.com"
@@ -227,7 +274,7 @@ const Contact = () => {
                   </Link>
                 </Typography>
 
-                <Typography variant="body1">
+                <Typography variant="body1" color='#fff'>
                   📱 <strong>Phone:</strong>{' '}
                   <Link
                     href="tel:+639054251897"
@@ -237,7 +284,7 @@ const Contact = () => {
                   </Link>
                 </Typography>
 
-                <Typography variant="body1">
+                <Typography variant="body1" color='#fff'>
                   📍 <strong>Location:</strong><br />
                   Olongapo City, Zambales, Philippines
                 </Typography>

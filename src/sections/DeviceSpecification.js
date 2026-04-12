@@ -6,13 +6,20 @@ import DeveloperBoardIcon from '@mui/icons-material/DeveloperBoard';
 import LaptopMacIcon from '@mui/icons-material/LaptopMac';
 // import Laptop3D from '../components/Laptop3D';
 import LaptopGallery from '../components/LaptopGallery';
+import { keyframes } from '@mui/system';
+
+const glowMove = keyframes`
+  0% { background-position: 0%; }
+  100% { background-position: 200%; }
+`;
 
 const DeviceSpecification = () => {
   return (
     <Box
       sx={{
         minHeight: '100vh',
-        backgroundColor: '#f5f7fa',
+        background: '#020617',
+        color: '#fff',
         px: { xs: 3, md: 10 },
         py: 8,
         display: 'flex',
@@ -21,19 +28,61 @@ const DeviceSpecification = () => {
       }}
     >
 
-      <Typography variant="h4" fontWeight="bold" gutterBottom sx={{ py: 4 }}>
+      {/* <Typography variant="h4" fontWeight="bold" gutterBottom sx={{ py: 4 }}>
         Remote Work Device Specification
-      </Typography>
+      </Typography> */}
+      <Typography
+              variant="h4"
+              sx={{
+                textAlign: 'center',
+                fontWeight: 800,
+                mb: 2,
+                background: 'linear-gradient(90deg, #38bdf8, #818cf8)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+              }}
+            >
+              Remote Work Device Specification
+            </Typography>
 
       <Typography variant="body1" sx={{ mb: 4, maxWidth: 1200, lineHeight: 1.8 }}>
-        For cloud-based technical support and remote operations, having a reliable and high-performance system is essential.
-        Below is my current workstation setup, optimized for cloud environments, web development, virtualization,
-        and multitasking production support tasks.
+        Great results don’t happen by chance—they’re backed by the right tools. My workstation is engineered to handle demanding workloads, fast turnarounds, and real-time collaboration—so your business never slows down.
       </Typography>
 
       <LaptopGallery />
 
-      <Card elevation={4} sx={{ borderRadius: 1, maxWidth: 1400 }}>
+      <Card 
+      elevation={4} 
+      sx={{ 
+        position: 'relative',
+        overflow: 'hidden',
+        borderRadius: 3, 
+        maxWidth: 1400, 
+        background: 'rgba(255,255,255,0.03)',
+        backdropFilter: 'blur(10px)', 
+        color: '#fff',
+        border: '2px solid rgb(44, 47, 113)',
+        // RGB Glow Border
+                '&::before': {
+                  content: '""',
+                  position: 'absolute',
+                  inset: 0,
+                  borderRadius: 'inherit',
+                  padding: '6px',
+                  background:
+                    'linear-gradient(90deg, rgb(56, 189, 248), rgb(129, 140, 248), rgb(236, 72, 153), rgb(129, 140, 248), rgb(56, 189, 248))',
+                  backgroundSize: '200%',
+                  WebkitMask:
+                    'linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)',
+                  WebkitMaskComposite: 'xor',
+                  animation: `${glowMove} 6s linear infinite`,
+                  opacity: 0,
+                  transition: '0.3s',
+                  filter: 'blur(2px)',
+                  zIndex: 3,
+                },
+                '&:hover::before': { opacity: 1 },
+        }}>
         <CardContent>
           <Grid container spacing={4}>
             <Grid item xs={12} md={6}>
@@ -106,8 +155,8 @@ const DeviceSpecification = () => {
   <Chip label="High-Performance Multitasking (Ryzen 9 Powered)" color="success" />
   <Chip label="Handles Multiple Applications Simultaneously" color="success" />
   <Chip label="Virtual Assistant & Administrative Ready" color="success" />
-  <Chip label="Cloud & SaaS Platform Support" color="success" />
-  <Chip label="Virtualization & Development Environment Capable" color="success" />
+  <Chip label="Web Development & Modern Site Deployment Ready" color="success" />
+  <Chip label="Social Media Management & Content Scheduling Optimized" color="success" />
   <Chip label="Video Conferencing & Screen Sharing Optimized" color="success" />
   <Chip label="Content Creation & Media Editing Capable" color="success" />
   <Chip label="Production-Level Remote Work Setup" color="success" />

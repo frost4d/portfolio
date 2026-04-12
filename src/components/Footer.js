@@ -12,7 +12,7 @@ const Footer = () => {
       component="footer"
       sx={{
         width: '100%',
-        backgroundColor: '#1a1a1a',
+        background: 'linear-gradient(135deg, #020617, #0f172a, #020617)',
         color: '#ccc',
         py: 6,
         px: 2,
@@ -26,7 +26,7 @@ const Footer = () => {
             About Me
           </Typography>
           <Typography variant="body1" sx={{ color: '#aaa', maxWidth: 1000 }}>
-            I'm a Cloud Technical Support Specialist and Web Developer providing reliable remote support, virtualization expertise, and modern web solutions for businesses worldwide.
+            Hello! I’m <strong>James,</strong> your <strong>Future Social Media Manager & Web Developer</strong>. I help businesses grow and stand out online by creating scroll-stopping content, managing social media with strategy, and building sleek, high-converting websites, delivering results that matter for businesses worldwide.
           </Typography>
         </Grid>
 

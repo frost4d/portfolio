@@ -18,11 +18,11 @@ const EducationalBackground = () => {
 
   return (
     <Stack
-      component={motion.div}
-      ref={ref}
-      initial={{ opacity: 0, y: 50 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.8, ease: 'easeOut' }}
+      // component={motion.div}
+      // ref={ref}
+      // initial={{ opacity: 0, y: 50 }}
+      // animate={inView ? { opacity: 1, y: 0 } : {}}
+      // transition={{ duration: 0.8, ease: 'easeOut' }}
       direction={{ xs: 'column', md: 'row' }}
       spacing={10}
       alignItems="center"
@@ -31,7 +31,8 @@ const EducationalBackground = () => {
         minHeight: '90vh',
         px: { xs: 4, md: 10 },
         py: { xs: 15, md: 12 },
-        backgroundColor: '#ffffff',
+        background: '#020617',
+        color: '#fff',
       }}
     >
       {/* Graduation Image */}
@@ -59,7 +60,9 @@ const EducationalBackground = () => {
           variant="h4"
           sx={{
             fontWeight: 'bold',
-            color: '#333',
+            background: 'linear-gradient(90deg, #38bdf8, #818cf8)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
             borderBottom: '3px solid #f4b400',
             display: 'inline-block',
             mb: 3,
@@ -70,7 +73,7 @@ const EducationalBackground = () => {
 
         <Typography
   variant="body1"
-  sx={{ color: '#555', lineHeight: 1.8, mb: 3, textAlign: 'justify' }}
+  sx={{ color: '#fff', lineHeight: 1.8, mb: 3, textAlign: 'justify' }}
 >
   I earned my <strong style={{ color: '#f4b400' }}>
     Bachelor of Science in Computer Science

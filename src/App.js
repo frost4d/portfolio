@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Box } from '@mui/material';
-import Navbar from './components/Navbar';
+// import Navbar from './components/Navbar';
 import Home from './sections/Home';
 import About from './sections/About';
 import Contact from './sections/Contact';
@@ -13,19 +13,26 @@ import MoreAboutMe from './sections/MoreAboutMe';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import DeviceSpecification from './sections/DeviceSpecification';
-
+import LandingPage from './sections/LandingPage';
+import ServicesSection from './sections/ServicesSection';
+import PortfolioSection from './sections/PortfolioSection';
+import FloatingContact from './sections/FloatingContact';
 
 function App() {
   return (
     <BrowserRouter basename= "/portfolio">
     <Box sx={{ overflow: 'hidden' }}>
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={
           <>
+            <FloatingContact />
+            <LandingPage />
             <Home />
-            <About />
+            <ServicesSection />
             <Skills />
+            <PortfolioSection />
+            <About />
             <WorkExperience />
             <EducationalBackground />
             <DeviceSpecification/>

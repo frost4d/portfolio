@@ -25,7 +25,7 @@
     "react-scripts": "5.0.1",
     "react-slick": "^0.31.0",
     "slick-carousel": "^1.8.1",
-    "three": "^0.183.1",
+    "three": "^0.183.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
