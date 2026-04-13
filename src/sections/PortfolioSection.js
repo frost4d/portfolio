@@ -9,9 +9,9 @@ const glowMove = keyframes`
 
 const designs = [
   'website1.png',
-  'Coffee.png',
   'Cocktail.mp4',
   'Cake.png',
+  'Coffee.png',
   'TripToBali.mp4',
   'SeminyakSample.png',
   'Yatch.png',
