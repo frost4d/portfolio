@@ -84,7 +84,7 @@ const ServicesSection = () => {
   }, []);
 
   return (
-    <Box sx={{ py: 12, px: { xs: 4, md: 12 }, background: '#020617', color: '#fff' }}>
+    <Box id="services" sx={{ py: 12, px: { xs: 4, md: 12 }, background: '#020617', color: '#fff' }}>
       {/* TITLE */}
       <Typography
         variant="h4"

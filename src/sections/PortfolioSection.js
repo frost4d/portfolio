@@ -66,6 +66,7 @@ const PortfolioSection = () => {
 
   return (
     <Box
+      id= "portfolio"
       sx={{
         py: 12,
         px: { xs: 4, md: 12 },

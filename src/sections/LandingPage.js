@@ -133,6 +133,7 @@ useEffect(() => {
 
   return (
     <Box
+      id="home"
       sx={{
         width: '100%',
         minHeight: '100vh',
@@ -228,17 +229,20 @@ useEffect(() => {
           </Box> */}
 
           <Stack direction="row" spacing={2} sx={{ mt: 5, justifyContent: 'center' }}>
-            <Button
-              variant="contained"
-              sx={{
-                background: 'linear-gradient(90deg, #38bdf8, #6366f1)',
-                px: 4,
-                fontWeight: 'bold',
-                '&:hover': { background: 'linear-gradient(90deg, #0ea5e9, #4f46e5)' },
-              }}
-            >
-              Connect with me
-            </Button>
+           <Button
+            variant="contained"
+            href="https://www.linkedin.com/in/james-patrick-tsung-52b796273/"
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{
+              background: 'linear-gradient(90deg, #38bdf8, #6366f1)',
+              px: 4,
+              fontWeight: 'bold',
+              '&:hover': { background: 'linear-gradient(90deg, #0ea5e9, #4f46e5)' },
+            }}
+          >
+            Connect with me
+          </Button>
 
             <Button
               variant="outlined"

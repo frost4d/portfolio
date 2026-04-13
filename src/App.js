@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Box } from '@mui/material';
-// import Navbar from './components/Navbar';
+import Navbar from './components/Navbar';
 import Home from './sections/Home';
 import About from './sections/About';
 import Contact from './sections/Contact';
@@ -22,7 +22,7 @@ function App() {
   return (
     <BrowserRouter basename= "/portfolio">
     <Box sx={{ overflow: 'hidden' }}>
-      {/* <Navbar /> */}
+      <Navbar />
       <Routes>
         <Route path="/" element={
           <>
