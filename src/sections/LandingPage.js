@@ -3,6 +3,9 @@ import React, { useRef, useState, useEffect } from 'react';
 import { Box, Typography, Button, Stack } from '@mui/material';
 import Navbar from '../components/Navbar';
 import { keyframes } from '@mui/system';
+import { Canvas } from "@react-three/fiber";
+import { Environment, OrbitControls } from "@react-three/drei";
+import RobotModel from "../components/RobotModel";
 
 // Splash animation
 const splash = keyframes`
@@ -265,80 +268,59 @@ useEffect(() => {
         </Box>
 
         {/* RIGHT SIDE (Social Images) */}
+        {/* RIGHT */}
+      <Box
+        sx={{
+          flex: 1,
+          mt: { xs: 6, md: 0 },
+          display: "flex",
+          justifyContent: "center",
+          zIndex: 1,
+        }}
+      >
         <Box
           sx={{
-            flex: 1,
-            display: 'grid',
-            gridTemplateColumns: 'repeat(2, 1fr)',
-            gridGap: 0,
-            placeItems: 'center',
-            position: 'relative',
-            p: 2,
-            mb: 0,
-            zIndex: 1,
+            width: "100%",
+            maxWidth: 1200,
+            height: 600,
+            overflow: "hidden",
           }}
         >
-          {/* Glow Background */}
-          <Box
-            sx={{
-              position: 'absolute',
-              width: 300,
-              height: 300,
-              borderRadius: '50%',
-              background: '#6366f1',
-              filter: 'blur(120px)',
-              opacity: 0.4,
-              pointerEvents: 'none',
+          <Canvas
+            camera={{
+              position: [0, 1.5, 5],
+              fov: 45,
             }}
-          />
+          >
+            {/* Lights */}
+            <ambientLight intensity={2} />
 
-          {socialImages.map((img, index) => (
-    <Box
-      key={index}
-      sx={{
-        animation: `${splash} 0.8s ease forwards`,
-        animationDelay: `${index * 0.2}s`,
-        opacity: 0,
-      }}
-    >
-      <Box
-        ref={(el) => (imgRefs.current[index] = el)}
-        component="img"
-        src={process.env.PUBLIC_URL + img}
-        alt={img.split('/').pop().split('.')[0]}
-        onMouseMove={(e) => handleMouseMove(e, index)}
-        onMouseLeave={() => handleMouseLeave(index)}
-        sx={{
-          width: 200,
-          height: 200,
-          objectFit: 'contain',
-          borderRadius: 4,
-          position: 'relative',
-          zIndex: 1,
-          
+            <directionalLight
+              position={[5, 5, 5]}
+              intensity={3}
+            />
 
-          boxShadow: '0 10px 25px rgba(0,0,0,0.3)',
+            {/* HDR Environment */}
+            <Environment preset="city" />
 
-          transform: 'perspective(900px)',
-          transition: 'transform 0.2s ease, box-shadow 0.2s ease',
-          willChange: 'transform',
+            {/* Robot */}
+            <RobotModel
+  modelPath={process.env.PUBLIC_URL + "/models/teal/robot/scene.gltf"}
+  scale={1.3}
+  position={[0, -1.4, 0]}
+  rotation={[0, Math.PI / 4, 0]}
+/>
 
-          '&::before': {
-            content: '""',
-            position: 'absolute',
-            inset: '-5px',
-            borderRadius: 'inherit',
-            background: 'linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet)',
-            zIndex: -1,
-            filter: 'blur(20px)',
-            opacity: 0.7,
-            animation: `${rgbGlow} 6s linear infinite`,
-          },
-        }}
-      />
-    </Box>
-  ))}
+
+            {/* Mouse Controls */}
+            <OrbitControls
+              enableZoom={false}
+              autoRotate
+              autoRotateSpeed={1}
+            />
+          </Canvas>
         </Box>
+      </Box>
       </Box>
     </Box>
   );
