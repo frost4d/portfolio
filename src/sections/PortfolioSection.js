@@ -9,6 +9,7 @@ const glowMove = keyframes`
 
 const designs = [
   'website1.png',
+  'website2.png',
   'Cocktail.mp4',
   'Cake.png',
   'Coffee.png',
@@ -20,6 +21,7 @@ const designs = [
 
 const designLinks = [
   "https://frost4d.github.io/beach-club/",
+  "https://frost4d.github.io/cosmetics-bento/",
   null,
   null,
   null,
@@ -243,6 +245,77 @@ const PortfolioSection = () => {
                   </Box>
                 </Box>
               )}
+
+              {/* ⭐ ALWAYS VISIBLE OVERLAY (ONLY Cosmetics Project) */}
+{design === 'website2.png' && (
+  <Box
+    sx={{
+      position: 'absolute',
+      inset: 0,
+      zIndex: 5,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'flex-start',
+      p: 3,
+    }}
+  >
+    <Typography
+      sx={{
+        fontSize: '0.7rem',
+        color: '#ec4899',
+        letterSpacing: 2,
+        mb: 1,
+      }}
+    >
+      FEATURED PROJECT
+    </Typography>
+
+    <Typography
+      sx={{
+        fontSize: '1.2rem',
+        fontWeight: 700,
+        mb: 1,
+      }}
+    >
+      Frostad Cosmetics Website
+    </Typography>
+
+    <Typography
+      sx={{
+        fontSize: '0.85rem',
+        color: '#cbd5e1',
+        mb: 2,
+        lineHeight: 1.4,
+      }}
+    >
+      A modern cosmetics brand showcase built with GSAP animations, immersive product storytelling, and a sleek bento‑style layout.
+    </Typography>
+
+    <Box
+      component="a"
+      href="https://frost4d.github.io/cosmetics-bento/"
+      target="_blank"
+      rel="noopener noreferrer"
+      sx={{
+        display: 'inline-block',
+        px: 2,
+        py: 1,
+        borderRadius: 2,
+        background: 'linear-gradient(90deg,#ec4899,#818cf8)',
+        color: '#000',
+        fontWeight: 'bold',
+        textDecoration: 'none',
+        fontSize: '0.8rem',
+        width: 'fit-content',
+        bottom: 30,
+        position: 'absolute',
+      }}
+    >
+      View Live Project
+    </Box>
+  </Box>
+)}
+
             </Box>
           </Grid>
         ))}

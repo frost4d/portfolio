@@ -74,26 +74,56 @@ const HireMeSection = () => {
           convert visitors into customers.
         </Typography>
 
-        <Button
-          variant="contained"
-          size="medium"
-          href="https://www.linkedin.com/in/james-patrick-tsung-52b796273/"
-          target="_blank"
-          sx={{
-            px: 5,
-            py: 2,
-            borderRadius: "50px",
-            fontWeight: "bold",
-            background:
-              "linear-gradient(90deg,#38bdf8,#6366f1)",
-            "&:hover": {
-              background:
-                "linear-gradient(90deg,#0ea5e9,#4f46e5)",
-            },
-          }}
-        >
-          Let's Work Together
-        </Button>
+<Button
+  variant="contained"
+  size="medium"
+  href="https://calendly.com/jamespatricktsung1/30min" // replace with your actual Calendly link
+  target="_blank"
+  sx={{
+    marginLeft: 5,
+    px: 5,
+    py: 1,
+    borderRadius: "50px",
+    fontWeight: "bold",
+    background: "linear-gradient(90deg,#38bdf8,#6366f1)",
+    "&:hover": {
+      background: "linear-gradient(90deg,#0ea5e9,#4f46e5)",
+    },
+    mb: 3, // spacing before line
+  }}
+>
+  Book a Meeting
+</Button>
+
+{/* Horizontal Line */}
+<Box
+  sx={{
+    width: "100%",
+    maxWidth: 300,
+    borderBottom: "2px solid #475569",
+    mb: 2,
+  }}
+/>
+
+{/* Text Link */}
+<Typography
+  component="a"
+  href="mailto:jamespatricktsung1@gmail.com"
+  target="_blank"
+  sx={{
+    paddingLeft: 8,
+    color: "#38bdf8",
+    fontWeight: "bold",
+    textDecoration: "none",
+    "&:hover": {
+      textDecoration: "underline",
+      color: "#0ea5e9",
+    },
+  }}
+>
+  Let’s Work Together
+</Typography>
+
       </Box>
 
       {/* RIGHT */}
