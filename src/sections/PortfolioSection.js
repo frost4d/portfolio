@@ -12,8 +12,9 @@ const designs = [
   'website2.png',
   'Cocktail.mp4',
   'Cake.png',
+  'cosmeticPost.png',
   'Coffee.png',
-  'TripToBali.mp4',
+  // 'TripToBali.mp4',
   'SeminyakSample.png',
   'Yatch.png',
   'Mood.png',
@@ -315,6 +316,33 @@ const PortfolioSection = () => {
     </Box>
   </Box>
 )}
+
+{/* ⭐ ALWAYS VISIBLE OVERLAY (ONLY Cosmetics Post) */}
+{design === 'cosmeticPost.png' && (
+  <Box
+    sx={{
+      position: 'absolute',
+      inset: 0,
+      zIndex: 5,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'flex-start',
+      p: 3,
+    }}
+  >
+    <Typography
+      sx={{
+        fontSize: '0.7rem',
+        color: '#38f5f8',
+        letterSpacing: 2,
+        mb: 1,
+      }}
+    >
+      INSTAGRAM POST DESIGN
+    </Typography>
+  </Box>
+)}
+
 
             </Box>
           </Grid>
