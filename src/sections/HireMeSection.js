@@ -110,7 +110,7 @@ const HireMeSection = () => {
 
         <Button
           variant="contained"
-          size="large"
+          size="medium"
           href="https://calendly.com/jamespatricktsung1/30min"
           target="_blank"
           sx={{
@@ -195,7 +195,8 @@ const HireMeSection = () => {
 
                 <React.Suspense fallback={null}>
                   <RobotModel
-                    modelPath={process.env.PUBLIC_URL + "/models/teal/scene.gltf"}
+                    // modelPath={process.env.PUBLIC_URL + "/models/teal/scene.gltf"}
+                    modelPath={process.env.PUBLIC_URL + "/models/teal/teal.glb"}
                     scale={2}
                     position={[0, -1.5, 0]}
                     rotation={[0, Math.PI / 4, 0]}
