@@ -168,29 +168,6 @@ useEffect(() => {
             py: { xs: 8, md: 0 },
           }}
         >
-          {/* <Typography sx={{ color: '#38bdf8', letterSpacing: 2, fontSize: '0.8rem', mb: 2, textAlign: 'center' }}>
-            [ DIGITAL GROWTH SYSTEM ]
-          </Typography> */}
-
-          {/* FIRST HEADING */}
-            {/* <Typography
-            variant="h3"
-            sx={{
-              fontWeight: 'bold',
-              animation: `${fadeUp} 1s ease forwards`,
-              minHeight: '3rem', // reserve vertical space to prevent jump
-            }}
-          >
-            {displayedText1}
-            <Box
-              component="span"
-              sx={{
-                borderRight: '2px solid #38bdf8',
-                ml: 1,
-                animation: `${blink} 1s infinite`,
-              }}
-            />
-            </Typography> */}
 
           {/* SECOND HEADING */}
           <Typography
@@ -211,7 +188,7 @@ useEffect(() => {
             {displayedText2}
           </Typography>
 
-          <Typography sx={{ mt: 3, color: '#cbd5f5', maxWidth: 610, lineHeight: 1.8, textAlign: 'center' }}>
+          <Typography sx={{ mt: 3, color: '#cbd5f5', lineHeight: 1.8, textAlign: 'center', fontSize: "1.3rem" }}>
             I help businesses stay consistent, organized, and visible online by
             managing their social media and handling essential daily operations — so they can focus on scaling.
           </Typography>
@@ -275,6 +252,7 @@ useEffect(() => {
           mt: { xs: 6, md: 0 },
           display: "flex",
           justifyContent: "center",
+          alignItems: "center",
           zIndex: 1,
         }}
       >

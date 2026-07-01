@@ -113,7 +113,7 @@ const ServicesSection = () => {
       </Typography>
 
       {/* CARDS */}
-      <Grid container spacing={6} justifyContent="space-between">
+      <Grid container spacing={6} justifyContent="center" alignItems="stretch">
         {services.map((service, index) => (
           <Grid item xs={12} sm={6} md={6} key={index} sx={{ display: 'flex' }}>
             <Box

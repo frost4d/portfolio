@@ -98,9 +98,9 @@ const PortfolioSection = () => {
       </Typography>
 
       {/* GRID */}
-      <Grid container spacing={4} justifyContent="space-evenly">
+      <Grid container spacing={4} justifyContent="center" alignItems="stretch" sx={{ maxWidth: '1600px', mx: 'auto' }}>
         {designs.map((design, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index}>
+          <Grid item xs={12} sm={6} md={3} xl={3} key={index}>
             <Box
               ref={(el) => (cardRefs.current[index] = el)}
               sx={{
