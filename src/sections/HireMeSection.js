@@ -151,7 +151,8 @@ const HireMeSection = () => {
           }}
         >
            (
-            showCanvas && (
+            {/* showCanvas && */}
+             (
               <Canvas
                 camera={{
                   position: [0, 1.6, 5],
