@@ -8,30 +8,6 @@ const RobotModel = React.lazy(() => import("../components/RobotModel"));
 
 const HireMeSection = () => {
   const [showCanvas, setShowCanvas] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    // Detect mobile screen
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-
-    // Intersection Observer for lazy loading
-    const section = document.getElementById("hire-me-section");
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setShowCanvas(true);
-        observer.disconnect();
-      }
-    }, { threshold: 0.2 });
-
-    if (section) observer.observe(section);
-
-    return () => {
-      window.removeEventListener("resize", checkMobile);
-      observer.disconnect();
-    };
-  }, []);
 
   return (
     <Box
@@ -174,14 +150,7 @@ const HireMeSection = () => {
             overflow: "hidden",
           }}
         >
-          {isMobile ? (
-            // Fallback static image for mobile
-            <img
-              src={process.env.PUBLIC_URL + "/assets/robot-preview.png"}
-              alt="Robot preview"
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            />
-          ) : (
+           (
             showCanvas && (
               <Canvas
                 camera={{
@@ -206,7 +175,7 @@ const HireMeSection = () => {
                 <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={1} />
               </Canvas>
             )
-          )}
+          )
         </Box>
       </Box>
     </Box>
