@@ -85,7 +85,7 @@ const WorkExperience = () => {
 >
     <Box
       component="img"
-      src={process.env.PUBLIC_URL + "/assets/Buwelo.png"}
+      src={process.env.PUBLIC_URL + "/assets/Buwelo.webp"}
       alt="Buwelo"
       // sx={{ maxWidth: 200, objectFit: 'contain', borderRadius: 2 }}
       sx={{
@@ -97,7 +97,7 @@ const WorkExperience = () => {
     />
     <Box
       component="img"
-      src={process.env.PUBLIC_URL + "/assets/Caret.png"}
+      src={process.env.PUBLIC_URL + "/assets/Caret.webp"}
       alt="CARET"
       // sx={{ maxWidth: 200, objectFit: 'contain', borderRadius: 2 }}
       sx={{
@@ -216,7 +216,7 @@ const WorkExperience = () => {
 >
               <Box
                 component="img"
-                src={process.env.PUBLIC_URL + "/assets/Pmti.png"}
+                src={process.env.PUBLIC_URL + "/assets/Pmti.webp"}
                 alt="PMTI"
                 sx={{ width: { xs: 120, sm: 150, md: 200 }, // 👈 keeps 200 on desktop
   height: 'auto',
