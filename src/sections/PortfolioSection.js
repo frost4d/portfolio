@@ -11,13 +11,13 @@ const designs = [
   'website1.png',
   'website2.png',
   'Cocktail.mp4',
-  'Cake.png',
-  'cosmeticPost.png',
-  'Coffee.png',
+  'Cake.webp',
+  'cosmeticPost.webp',
+  'Coffee.webp',
   // 'TripToBali.mp4',
-  'SeminyakSample.png',
-  'Yatch.png',
-  'Mood.png',
+  'SeminyakSample.webp',
+  'Yatch.webp',
+  'Mood.webp',
 ];
 
 const designLinks = [
