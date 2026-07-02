@@ -426,7 +426,7 @@ const Home = () => {
           <Box
             component="img"
             // src="/assets/mypic1.png"
-            src={process.env.PUBLIC_URL + "/assets/mypic6.png"}
+            src={process.env.PUBLIC_URL + "/assets/mypic6.webp"}
             alt="James"
             sx={{
               width: '100%',

@@ -8,8 +8,8 @@ const glowMove = keyframes`
 `;
 
 const designs = [
-  'website1.png',
-  'website2.png',
+  'website1.webp',
+  'website2.webp',
   'Cocktail.mp4',
   'Cake.webp',
   'cosmeticPost.webp',
@@ -175,7 +175,7 @@ const PortfolioSection = () => {
               )}
 
               {/* ⭐ ALWAYS VISIBLE OVERLAY (ONLY WEBSITE1) */}
-              {design === 'website1.png' && (
+              {design === 'website1.webp' && (
                 <Box
                   sx={{
                     position: 'absolute',
@@ -248,7 +248,7 @@ const PortfolioSection = () => {
               )}
 
               {/* ⭐ ALWAYS VISIBLE OVERLAY (ONLY Cosmetics Project) */}
-{design === 'website2.png' && (
+{design === 'website2.webp' && (
   <Box
     sx={{
       position: 'absolute',
