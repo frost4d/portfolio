@@ -318,7 +318,7 @@ const PortfolioSection = () => {
 )}
 
 {/* ⭐ ALWAYS VISIBLE OVERLAY (ONLY Cosmetics Post) */}
-{design === 'cosmeticPost.png' && (
+{design === 'cosmeticPost.webp' && (
   <Box
     sx={{
       position: 'absolute',
