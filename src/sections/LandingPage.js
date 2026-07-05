@@ -282,23 +282,13 @@ useEffect(() => {
             <Environment preset="city" />
 
             <Suspense fallback={null}>
-  <RobotModel
-    modelPath={process.env.PUBLIC_URL + "/models/teal/robot.glb"}
-    scale={1.3}
-    position={[0, -1.4, 0]}
-    rotation={[0, Math.PI / 4, 0]}
-  />
-</Suspense>
-
-
-            {/* Robot */}
-            {/* <RobotModel
-  // modelPath={process.env.PUBLIC_URL + "/models/teal/robot/scene.gltf"}
-  modelPath={process.env.PUBLIC_URL + "/models/teal/robot.glb"}
-  scale={1.3}
-  position={[0, -1.4, 0]}
-  rotation={[0, Math.PI / 4, 0]}
-/> */}
+              <RobotModel
+                modelPath={process.env.PUBLIC_URL + "/models/teal/robot.glb"}
+                scale={1.3}
+                position={[0, -1.4, 0]}
+                rotation={[0, Math.PI / 4, 0]}
+              />
+            </Suspense>
 
 
             {/* Mouse Controls */}
