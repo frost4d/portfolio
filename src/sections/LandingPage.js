@@ -1,10 +1,10 @@
 // LandingPage.js
-import React, { useRef, useState, useEffect, Suspense } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Box, Typography, Button, Stack } from '@mui/material';
 import Navbar from '../components/Navbar';
 import { keyframes } from '@mui/system';
 import { Canvas } from "@react-three/fiber";
-import { Environment, OrbitControls, Loader } from "@react-three/drei";
+import { Environment, OrbitControls } from "@react-three/drei";
 import RobotModel from "../components/RobotModel";
 
 // Splash animation
@@ -244,6 +244,7 @@ useEffect(() => {
           </Typography> */}
         </Box>
 
+        {/* RIGHT SIDE (Social Images) */}
         {/* RIGHT */}
       <Box
         sx={{
@@ -280,25 +281,14 @@ useEffect(() => {
             {/* HDR Environment */}
             <Environment preset="city" />
 
-
-              {/* Suspense wraps the model */}
-              <Suspense fallback={null}>
-                <RobotModel
-                  modelPath={process.env.PUBLIC_URL + "/models/teal/robot.glb"}
-                  scale={1.3}
-                  position={[0, -1.4, 0]}
-                  rotation={[0, Math.PI / 4, 0]}
-                />
-              </Suspense>
-
             {/* Robot */}
-            {/* <RobotModel
+            <RobotModel
   // modelPath={process.env.PUBLIC_URL + "/models/teal/robot/scene.gltf"}
   modelPath={process.env.PUBLIC_URL + "/models/teal/robot.glb"}
   scale={1.3}
   position={[0, -1.4, 0]}
   rotation={[0, Math.PI / 4, 0]}
-/> */}
+/>
 
 
             {/* Mouse Controls */}
@@ -311,12 +301,6 @@ useEffect(() => {
         </Box>
       </Box>
       </Box>
-      {/* Loader shows progress while assets load */}
-      <Loader
-        containerStyles={{ backgroundColor: '#020617' }} // background
-        barStyles={{ backgroundColor: '#38bdf8' }}       // progress bar color
-        dataStyles={{ color: '#fff', fontWeight: 'bold' }} // percentage text
-      />
     </Box>
   );
 };
