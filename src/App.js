@@ -48,7 +48,7 @@ function App() {
         </Routes>
         <Footer />
 
-        {/* 🔥 Global Loader */}
+        {/* 🔥 Loader is global and shows from the start */}
         <Loader
           containerStyles={{ backgroundColor: '#020617' }} // dark background
           barStyles={{ backgroundColor: '#38bdf8' }}       // cyan progress bar

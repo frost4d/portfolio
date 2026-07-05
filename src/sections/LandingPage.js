@@ -1,5 +1,5 @@
 // LandingPage.js
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect, Suspense } from 'react';
 import { Box, Typography, Button, Stack } from '@mui/material';
 import Navbar from '../components/Navbar';
 import { keyframes } from '@mui/system';
@@ -281,14 +281,24 @@ useEffect(() => {
             {/* HDR Environment */}
             <Environment preset="city" />
 
+            <Suspense fallback={null}>
+  <RobotModel
+    modelPath={process.env.PUBLIC_URL + "/models/teal/robot.glb"}
+    scale={1.3}
+    position={[0, -1.4, 0]}
+    rotation={[0, Math.PI / 4, 0]}
+  />
+</Suspense>
+
+
             {/* Robot */}
-            <RobotModel
+            {/* <RobotModel
   // modelPath={process.env.PUBLIC_URL + "/models/teal/robot/scene.gltf"}
   modelPath={process.env.PUBLIC_URL + "/models/teal/robot.glb"}
   scale={1.3}
   position={[0, -1.4, 0]}
   rotation={[0, Math.PI / 4, 0]}
-/>
+/> */}
 
 
             {/* Mouse Controls */}
