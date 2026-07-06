@@ -18,7 +18,6 @@ import ServicesSection from './sections/ServicesSection';
 import PortfolioSection from './sections/PortfolioSection';
 import FloatingContact from './sections/FloatingContact';
 import HireMeSection from './sections/HireMeSection';
-import { Loader } from "@react-three/drei";
 
 function App() {
   return (
@@ -45,11 +44,6 @@ function App() {
         <Route path="/more-about-me" element={<MoreAboutMe />} />
       </Routes>
       <Footer />
-      <Loader
-          containerStyles={{ backgroundColor: '#020617' }} // background
-          barStyles={{ backgroundColor: '#38bdf8' }}       // progress bar color
-          dataStyles={{ color: '#fff', fontWeight: 'bold' }} // percentage text
-        />
       </Box>
     </BrowserRouter>
   );
