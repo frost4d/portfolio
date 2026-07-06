@@ -283,9 +283,10 @@ useEffect(() => {
       </Box>
       </Box>
       <Loader
-        containerStyles={{ backgroundColor: '#020617' }} // background
-        barStyles={{ backgroundColor: '#38bdf8' }}       // progress bar color
+        containerStyles={{ backgroundColor: '#020617', width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', }} // background
+        barStyles={{ backgroundColor: '#38bdf8', minWidth: '180px' }}       // progress bar color
         dataStyles={{ color: '#fff', fontWeight: 'bold', fontSize: '.8rem' }} // percentage text
+        dataInterpolation={(p) => `Rendering 3D model... ${p.toFixed(0)}%`}
       />
     </Box>
   );
