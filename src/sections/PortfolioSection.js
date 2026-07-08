@@ -10,6 +10,7 @@ const glowMove = keyframes`
 const designs = [
   'website1.webp',
   'website2.webp',
+  'notionCalendar.webp',
   'Cocktail.mp4',
   'Cake.webp',
   'cosmeticPost.webp',
@@ -23,6 +24,7 @@ const designs = [
 const designLinks = [
   "https://frost4d.github.io/beach-club/",
   "https://frost4d.github.io/cosmetics-bento/",
+  "https://app.notion.com/p/db4184d0c2b049e88b0ad01c36fc0288?v=4f0857e31bfb4232b6c8c23c7588fdbb&source=copy_link",
   null,
   null,
   null,
@@ -340,6 +342,75 @@ const PortfolioSection = () => {
     >
       INSTAGRAM POST DESIGN
     </Typography>
+  </Box>
+)}
+
+    {design === 'notionCalendar.webp' && (
+  <Box
+    sx={{
+      position: 'absolute',
+      inset: 0,
+      zIndex: 5,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'flex-start',
+      p: 3,
+    }}
+  >
+    <Typography
+      sx={{
+        fontSize: '0.7rem',
+        color: '#a78bfa',
+        letterSpacing: 2,
+        mb: 1,
+      }}
+    >
+      CONTENT STRATEGY PROJECT
+    </Typography>
+
+    <Typography
+      sx={{
+        fontSize: '1.2rem',
+        fontWeight: 700,
+        mb: 1,
+      }}
+    >
+      Social Media Calendar/Content Planner
+    </Typography>
+
+    <Typography
+      sx={{
+        fontSize: '0.85rem',
+        color: '#cbd5e1',
+        mb: 2,
+        lineHeight: 1.4,
+      }}
+    >
+      A Notion-based content planner for Frostad Cosmetics, organizing posts, campaigns, and creative workflows.
+    </Typography>
+
+    <Box
+      component="a"
+      href="https://app.notion.com/p/db4184d0c2b049e88b0ad01c36fc0288?v=4f0857e31bfb4232b6c8c23c7588fdbb&source=copy_link"
+      target="_blank"
+      rel="noopener noreferrer"
+      sx={{
+        display: 'inline-block',
+        px: 2,
+        py: 1,
+        borderRadius: 2,
+        background: 'linear-gradient(90deg,#a78bfa,#818cf8)',
+        color: '#000',
+        fontWeight: 'bold',
+        textDecoration: 'none',
+        fontSize: '0.8rem',
+        width: 'fit-content',
+        bottom: 30,
+        position: 'absolute',
+      }}
+    >
+      View Live Project
+    </Box>
   </Box>
 )}
 
