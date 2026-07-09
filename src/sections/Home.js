@@ -428,6 +428,7 @@ const Home = () => {
             // src="/assets/mypic1.png"
             src={process.env.PUBLIC_URL + "/assets/mypic6.webp"}
             alt="James"
+            onContextMenu={(e) => e.preventDefault()}
             sx={{
               width: '100%',
               maxWidth: 470,

@@ -105,6 +105,7 @@ const PortfolioSection = () => {
           <Grid item xs={12} sm={6} md={3} xl={3} key={index}>
             <Box
               ref={(el) => (cardRefs.current[index] = el)}
+              onContextMenu={(e) => e.preventDefault()}
               sx={{
                 position: 'relative',
                 borderRadius: 4,

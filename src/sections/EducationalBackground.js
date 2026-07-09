@@ -39,8 +39,9 @@ const EducationalBackground = () => {
       <Box
         component="img"
         // src="/assets/gradpic.png"
-        src={process.env.PUBLIC_URL + "/assets/gradpic.png"}
+        src={process.env.PUBLIC_URL + "/assets/gradpic.webp"}
         alt="Graduation"
+        onContextMenu={(e) => e.preventDefault()}
         sx={{
           width: { xs: '100%', md: 600 },
           maxWidth: '100%',

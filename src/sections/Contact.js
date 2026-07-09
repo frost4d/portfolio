@@ -70,6 +70,7 @@ const Contact = () => {
           // src="/assets/mypic4.png"
           src={process.env.PUBLIC_URL + "/assets/mypic4.png"}
           alt="Contact Illustration"
+          onContextMenu={(e) => e.preventDefault()}
           sx={{
             width: { xs: '100%', md: 640 },
             height: { xs: 'auto', md: 640 },

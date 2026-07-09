@@ -68,6 +68,7 @@ const About = () => {
           component="img"
           src={process.env.PUBLIC_URL + '/assets/mypic2.png'}
           alt="James Profile"
+          onContextMenu={(e) => e.preventDefault()}
           sx={{
             width: { xs: '100%', md: 600 },
             boxShadow: '0 10px 25px rgba(0,0,0,0.15)',
