@@ -68,7 +68,7 @@ const Contact = () => {
         <Box
           component="img"
           // src="/assets/mypic4.png"
-          src={process.env.PUBLIC_URL + "/assets/mypic4.png"}
+          src={process.env.PUBLIC_URL + "/assets/mypic4.webp"}
           alt="Contact Illustration"
           onContextMenu={(e) => e.preventDefault()}
           sx={{

@@ -66,7 +66,7 @@ const About = () => {
         {/* Profile Image */}
         <Box
           component="img"
-          src={process.env.PUBLIC_URL + '/assets/mypic2.png'}
+          src={process.env.PUBLIC_URL + '/assets/mypic2.webp'}
           alt="James Profile"
           onContextMenu={(e) => e.preventDefault()}
           sx={{
