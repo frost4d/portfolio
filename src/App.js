@@ -17,7 +17,7 @@ import LandingPage from './sections/LandingPage';
 import ServicesSection from './sections/ServicesSection';
 import PortfolioSection from './sections/PortfolioSection';
 import FloatingContact from './sections/FloatingContact';
-import HireMeSection from './sections/HireMeSection';
+// import HireMeSection from './sections/HireMeSection';
 
 function App() {
   return (
@@ -37,7 +37,7 @@ function App() {
             <WorkExperience />
             <EducationalBackground />
             <DeviceSpecification/>
-            <HireMeSection />
+            {/* <HireMeSection /> */}
             <Contact />
           </>
         } />
