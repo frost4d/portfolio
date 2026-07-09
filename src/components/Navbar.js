@@ -11,7 +11,7 @@ import {
   ListItemText,
   useMediaQuery,
   Box,
-  LinearProgress
+  LinearProgress,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
@@ -22,16 +22,15 @@ const Navbar = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
-
   const isMobile = useMediaQuery('(max-width:768px)');
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const docHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
       const progress = (currentScrollY / docHeight) * 100;
       setScrollProgress(progress);
-
       setScrolled(currentScrollY > 50);
 
       if (currentScrollY > lastScrollY && currentScrollY > 100) {
@@ -123,14 +122,34 @@ const Navbar = () => {
                     backgroundColor: '#38bdf8',
                     transition: 'width 0.3s ease',
                   },
-                  '&:hover::after': {
-                    width: '100%',
-                  },
+                  '&:hover::after': { width: '100%' },
                 }}
               >
                 {section.charAt(0).toUpperCase() + section.slice(1)}
               </Button>
             ))}
+
+          {/* Book a Meeting CTA (Desktop only) */}
+          {!isMobile && (
+            <Button
+              variant="contained"
+              href="https://calendly.com/jamespatricktsung1/30min"
+              target="_blank"
+              sx={{
+                ml: 2,
+                px: 3,
+                py: 1,
+                borderRadius: '50px',
+                fontWeight: 'bold',
+                background: 'linear-gradient(90deg,#38bdf8,#6366f1)',
+                '&:hover': {
+                  background: 'linear-gradient(90deg,#0ea5e9,#4f46e5)',
+                },
+              }}
+            >
+              Book a Meeting
+            </Button>
+          )}
 
           {/* Mobile Menu */}
           {isMobile && (
@@ -148,10 +167,9 @@ const Navbar = () => {
                 onClose={() => setDrawerOpen(false)}
                 PaperProps={{
                   sx: {
-                    width: 180,          // narrower width
-                    height: 300,         // fixed height
-                    // background: 'linear-gradient(180deg, #0f172a, #141c29)',
-                    background: 'linear-gradient(180deg, #020617, #020617bc)',               
+                    width: 180,
+                    height: 'auto',
+                    background: 'linear-gradient(180deg, #020617, #020617bc)',
                     color: 'white',
                     backdropFilter: 'blur(12px)',
                     borderRadius: '0 0 0 18px',
@@ -160,13 +178,12 @@ const Navbar = () => {
                 }}
               >
                 <Box
-                  sx={{
-                    display: 'flex',
-                    justifyContent: 'flex-end',
-                    p: 1,
-                  }}
+                  sx={{ display: 'flex', justifyContent: 'flex-end', p: 1 }}
                 >
-                  <IconButton onClick={() => setDrawerOpen(false)} sx={{ color: 'white' }}>
+                  <IconButton
+                    onClick={() => setDrawerOpen(false)}
+                    sx={{ color: 'white' }}
+                  >
                     <CloseIcon />
                   </IconButton>
                 </Box>
@@ -193,12 +210,41 @@ const Navbar = () => {
                       }}
                     >
                       <ListItemText
-                        primary={section.charAt(0).toUpperCase() + section.slice(1)}
-                        sx={{ px: 2, transition: 'color 0.3s ease',
-                          '&:hover': { color: '#38bdf8' }, }}
+                        primary={
+                          section.charAt(0).toUpperCase() + section.slice(1)
+                        }
+                        sx={{
+                          px: 2,
+                          transition: 'color 0.3s ease',
+                          '&:hover': { color: '#38bdf8' },
+                        }}
                       />
                     </ListItem>
                   ))}
+
+                  {/* Book a Meeting CTA (Mobile Drawer) */}
+                  <ListItem
+                    button
+                    onClick={() =>
+                      (window.location.href =
+                        'https://calendly.com/jamespatricktsung1/30min')
+                    }
+                    sx={{
+                      mt: 2,
+                      mb: 2,
+                      justifyContent: 'center',
+                      background: 'linear-gradient(90deg,#38bdf8,#6366f1)',
+                      fontWeight: 'bold',
+                      '&:hover': {
+                        background: 'linear-gradient(90deg,#0ea5e9,#4f46e5)',
+                      },
+                    }}
+                  >
+                    <ListItemText
+                      primary="Book a Meeting"
+                      sx={{ textAlign: 'center', color: '#fff' }}
+                    />
+                  </ListItem>
                 </List>
               </Drawer>
             </>
