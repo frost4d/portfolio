@@ -3,13 +3,11 @@ import { Box } from "@mui/material";
 import Tilt from "react-parallax-tilt";
 import { keyframes } from "@mui/system";
 
-// 🔥 Glow animation
 const glowMove = keyframes`
   0% { background-position: 0%; }
   100% { background-position: 200%; }
 `;
 
-// ✨ Soft floating animation
 const float = keyframes`
   0% { transform: translateY(0px); }
   50% { transform: translateY(-8px); }
@@ -35,20 +33,20 @@ const LaptopGallery = () => {
         alignItems: "center",
         justifyContent: "center",
         gap: { xs: 4, md: 6 },
-        // mb: 10,
+        mb: 6,
       }}
     >
-      {/* 💻 MAIN IMAGE CONTAINER */}
+      {/* 💻 MAIN IMAGE */}
       <Box
         sx={{
-          position: "relative",
           borderRadius: 4,
-          p: 2,
-          // background: "rgba(255,255,255,0.03)",
+          p: { xs: 1, sm: 2 },
           backdropFilter: "blur(10px)",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
-        {/* ✨ Glow background */}
         <Box
           sx={{
             position: "absolute",
@@ -60,8 +58,6 @@ const LaptopGallery = () => {
             zIndex: 0,
           }}
         />
-
-        {/* 💻 IMAGE */}
         <Tilt
           scale={1.05}
           transitionSpeed={2500}
@@ -76,7 +72,7 @@ const LaptopGallery = () => {
             sx={{
               position: "relative",
               zIndex: 2,
-              width: { xs: 280, md: 600 },
+              width: { xs: 240, sm: 300, md: 600 },
               animation: `${float} 6s ease-in-out infinite`,
               transition: "all 0.4s ease",
               filter: "drop-shadow(0 40px 80px rgba(0,0,0,0.7))",
@@ -89,36 +85,32 @@ const LaptopGallery = () => {
       <Box
         sx={{
           display: "grid",
-          gridTemplateColumns: "repeat(2, 1fr)",
-          gap: 4,
-          p: 15,
+          gridTemplateColumns: {
+            xs: "repeat(3, 1fr)",
+            sm: "repeat(4, 1fr)",
+            md: "repeat(2, 1fr)",
+          },
+          gap: { xs: 2, sm: 3, md: 4 },
+          p: { xs: 2, sm: 3, md: 4 },
           borderRadius: 3,
           backdropFilter: "blur(10px)",
+          justifyItems: "center",
         }}
       >
         {images.map((img, index) => {
           const isActive = selectedImage === img;
-
           return (
             <Box
               key={index}
               onClick={() => setSelectedImage(img)}
               sx={{
-                position: "relative",
                 borderRadius: 2,
                 overflow: "hidden",
                 cursor: "pointer",
                 transition: "all 0.3s ease",
-
                 transform: isActive ? "scale(1.08)" : "scale(1)",
                 opacity: isActive ? 1 : 0.6,
-
-                "&:hover": {
-                  transform: "scale(1.1)",
-                  opacity: 1,
-                },
-
-                // 🔥 GLOW BORDER
+                "&:hover": { transform: "scale(1.1)", opacity: 1 },
                 "&::before": {
                   content: '""',
                   position: "absolute",
@@ -137,14 +129,14 @@ const LaptopGallery = () => {
                 },
               }}
             >
-              {/* IMAGE */}
               <Box
                 component="img"
                 src={img}
                 alt={`thumbnail-${index}`}
                 sx={{
-                  width: 100,
+                  width: { xs: 80, sm: 100, md: 120 },
                   display: "block",
+                  borderRadius: 2,
                 }}
               />
             </Box>

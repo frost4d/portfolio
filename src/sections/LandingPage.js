@@ -7,34 +7,6 @@ import { Canvas } from "@react-three/fiber";
 import { Environment, OrbitControls, Loader } from "@react-three/drei";
 import RobotModel from "../components/RobotModel";
 
-// Splash animation
-const splash = keyframes`
-  0% {
-    transform: scale(0.5) rotate(-20deg);
-    opacity: 0;
-  }
-  50% {
-    transform: scale(1.2) rotate(10deg);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1) rotate(0deg);
-    opacity: 1;
-  }
-`;
-
-// Floating animation
-const float = keyframes`
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-12px); }
-  100% { transform: translateY(0px); }
-`;
-
-const rgbGlow = keyframes`
-  0%   { filter: hue-rotate(0deg); }
-  100% { filter: hue-rotate(360deg); }
-`;
-
 const fadeUp = keyframes`
   0% {
     opacity: 0;
@@ -51,63 +23,10 @@ const shimmer = keyframes`
   100% { background-position: 200% center; }
 `;
 
-const blink = keyframes`
-  0%,100% { opacity: 1; }
-  50% { opacity: 0; }
-`;
 
 const LandingPage = () => {
-  const socialImages = [
-    '/assets/Facebook.png',
-    '/assets/Instagram.png',
-    '/assets/Tiktok.png',
-    '/assets/Canva.png',
-  ];
 
-// ✅ Ref array
-  const imgRefs = useRef([]);
-
-  const handleMouseMove = (e, index) => {
-    const el = imgRefs.current[index];
-    if (!el) return;
-
-    const rect = el.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    const midX = rect.width / 2;
-    const midY = rect.height / 2;
-
-    const rotateX = ((y - midY) / midY) * 15;
-    const rotateY = ((x - midX) / midX) * -15;
-
-    const moveX = (x - midX) * 0.15;
-    const moveY = (y - midY) * 0.15;
-
-    el.style.transform = `
-      perspective(900px)
-      rotateX(${rotateX}deg)
-      rotateY(${rotateY}deg)
-      translate(${moveX}px, ${moveY}px)
-      scale(1.08)
-    `;
-
-    el.style.boxShadow = `
-      ${-moveX}px ${-moveY}px 30px rgba(255,0,150,0.6),
-      ${moveX}px ${moveY}px 40px rgba(0,200,255,0.6)
-    `;
-  };
-
-  const handleMouseLeave = (index) => {
-    const el = imgRefs.current[index];
-    if (!el) return;
-
-    el.style.transform =
-      'perspective(900px) rotateX(0deg) rotateY(0deg) translate(0,0) scale(1)';
-    el.style.boxShadow = '0 10px 25px rgba(0,0,0,0.3)';
-  };
-
-  const text1 = "Hi, I’m James";
+const text1 = "Hi, I’m James";
 const text2 = "Combine Tech, Strategy, and Creativity to Grow Your Brand";
 
 const [displayedText1, setDisplayedText1] = useState("");
@@ -206,13 +125,6 @@ useEffect(() => {
             [ DIGITAL GROWTH SYSTEM ]
           </Typography>
 
-          {/* <Box sx={{ mt: 4 }}>
-            <Typography sx={{ mb: 1 }}>⚡ Social Media Management</Typography>
-            <Typography sx={{ mb: 1 }}>⚡ Content Creation & Scheduling</Typography>
-            <Typography sx={{ mb: 1 }}>⚡ Engagement & Community Management</Typography>
-            <Typography sx={{ mb: 1 }}>⚡ Virtual Assistant & Admin Support</Typography>
-          </Box> */}
-
           <Stack direction="row" spacing={2} sx={{ mt: 5, justifyContent: 'center' }}>
            <Button
             variant="contained"
@@ -249,7 +161,6 @@ useEffect(() => {
           </Typography> */}
         </Box>
 
-        {/* RIGHT SIDE (Social Images) */}
         {/* RIGHT */}
       <Box
         sx={{
@@ -269,7 +180,7 @@ useEffect(() => {
             overflow: "hidden",
           }}
         >
-          <Canvas camera={{ position: [0, 1.5, 5], fov: 45 }}>
+          <Canvas dpr={[1, 2]} camera={{ position: [0, 1.5, 5], fov: 45 }}>
             <ambientLight intensity={2} />
             <directionalLight position={[5, 5, 5]} intensity={3} />
             <Suspense fallback={null}>
