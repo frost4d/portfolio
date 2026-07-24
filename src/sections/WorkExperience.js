@@ -1,5 +1,5 @@
-import React from 'react';
-import { Box, Typography, Divider, Stack } from '@mui/material';
+import React, { useState } from 'react';
+import { Box, Typography, Divider, Stack, Modal } from '@mui/material';
 import { keyframes } from '@mui/system';
 
 // Glow animation
@@ -9,6 +9,31 @@ const glowMove = keyframes`
 `;
 
 const WorkExperience = () => {
+  const [open, setOpen] = useState(false);
+  const [selectedCert, setSelectedCert] = useState(null);
+
+  const certifications = [
+    {
+      title: "Foundation Skills Training – Buwelo (Oct–Nov 2024)",
+      img: "/assets/BuweloCert1.webp",
+    },
+    {
+      title: "Product Specific Training & Nesting Program – Buwelo (Nov–Dec 2024)",
+      img: "/assets/BuweloCert2.webp",
+    },
+    {
+      title: "Most Improved Agent of 2025 – Buwelo (Dec 2025)",
+      img: "/assets/BuweloCert3.webp",
+    },
+  ];
+
+  const handleOpen = (cert) => {
+    setSelectedCert(cert);
+    setOpen(true);
+  };
+
+  const handleClose = () => setOpen(false);
+  
   return (
     <Box
       id="work-experience"
@@ -171,6 +196,60 @@ const WorkExperience = () => {
         </Box>
       ))}
     </Box>
+
+{/* ✅ Sleek Certifications Grid + Modal */}
+              <Box sx={{ mt: 3 }}>
+                <Typography variant="subtitle1" sx={{ fontWeight: 700, mb: 2, color: "#38bdf8" }}>
+                  Certifications
+                </Typography>
+                <Box sx={{ display: "grid", gridTemplateColumns: { xs: "1fr", sm: "repeat(3, 1fr)" }, gap: 2 }}>
+                  {certifications.map((cert) => (
+                    <Box key={cert.title} onClick={() => handleOpen(cert)} sx={{ cursor: "pointer" }}>
+                      <Box
+                        component="img"
+                        src={process.env.PUBLIC_URL + cert.img}
+                        alt={cert.title}
+                        sx={{ width: "100%", height: 100, objectFit: "cover" }}
+                      />
+                      <Typography sx={{ p: 1, fontSize: 13, color: "#cbd5f5", textAlign: "center" }}>
+                        {cert.title}
+                      </Typography>
+                    </Box>
+                  ))}
+                </Box>
+
+                {/* Modal */}
+                <Modal open={open} onClose={handleClose}>
+                  <Box
+                    sx={{
+                      position: "absolute",
+                      top: "50%",
+                      left: "50%",
+                      transform: "translate(-50%, -50%)",
+                      bgcolor: "#0f172a",
+                      borderRadius: 2,
+                      boxShadow: 24,
+                      p: 2,
+                    }}
+                  >
+                    {selectedCert && (
+                      <>
+                        <Typography sx={{ mb: 2, fontWeight: 600, color: "#38bdf8", textAlign: "center" }}>
+                          {selectedCert.title}
+                        </Typography>
+                        <Box
+                          component="img"
+                          src={process.env.PUBLIC_URL + selectedCert.img}
+                          alt={selectedCert.title}
+                          sx={{ width: "100%", minWidth: 350, borderRadius: 2 }}
+                        />
+                      </>
+                    )}
+                  </Box>
+                </Modal>
+              </Box>
+
+
   </Box>
 </Box>
 

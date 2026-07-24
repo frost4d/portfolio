@@ -21,7 +21,7 @@ import FloatingContact from './sections/FloatingContact';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/portfolio">
     <Box sx={{ overflow: 'hidden' }}>
       <Navbar />
       <Routes>

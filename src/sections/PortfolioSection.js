@@ -14,10 +14,12 @@ const designs = [
   'Cocktail.mp4',
   'Cake.webp',
   'cosmeticPost.webp',
-  'Coffee.webp',
+  'Halaman.webp',
+  'HalamanLogo.webp',
   // 'TripToBali.mp4',
   'SeminyakSample.webp',
   'Yatch.webp',
+  'Coffee.webp',
   'Mood.webp',
 ];
 
@@ -25,6 +27,8 @@ const designLinks = [
   "https://frost4d.github.io/beach-club/",
   "https://frost4d.github.io/cosmetics-bento/",
   "https://app.notion.com/p/db4184d0c2b049e88b0ad01c36fc0288?v=4f0857e31bfb4232b6c8c23c7588fdbb&source=copy_link",
+  null,
+  null,
   null,
   null,
   null,
@@ -342,6 +346,31 @@ const PortfolioSection = () => {
       }}
     >
       INSTAGRAM POST DESIGN
+    </Typography>
+  </Box>
+)}
+
+{design === 'HalamanLogo.webp' && (
+  <Box
+    sx={{
+      position: 'absolute',
+      inset: 0,
+      zIndex: 5,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'flex-start',
+      p: 3,
+    }}
+  >
+    <Typography
+      sx={{
+        fontSize: '0.7rem',
+        color: '#38f8bb',
+        letterSpacing: 2,
+        mb: 1,
+      }}
+    >
+      BRAND LOGO DESIGN
     </Typography>
   </Box>
 )}
