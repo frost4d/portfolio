@@ -99,6 +99,7 @@ const Home = () => {
       {/* Text Section */}
       <Box
         sx={{
+          zIndex: 1,
           flex: 1,
           display: 'flex',
           flexDirection: 'column',
@@ -163,6 +164,7 @@ const Home = () => {
             color: '#cbd5f5',
             maxWidth: 650,
             lineHeight: 1.8,
+            zIndex: 2,
           }}
         >
           Build a strong digital presence through strategic content and modern websites.
