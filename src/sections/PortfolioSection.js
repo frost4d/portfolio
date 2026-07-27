@@ -18,9 +18,12 @@ const designs = [
   'HalamanLogo.webp',
   // 'TripToBali.mp4',
   'SeminyakSample.webp',
-  'Yatch.webp',
-  'Coffee.webp',
-  'Mood.webp',
+  'RealEstate.webp',
+  'CoffeeMenu.webp',
+  'YatchRental.webp',
+  // 'Yatch.webp',
+  // 'Coffee.webp',
+  // 'Mood.webp',
 ];
 
 const designLinks = [
