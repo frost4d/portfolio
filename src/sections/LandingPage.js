@@ -47,6 +47,30 @@ const LandingPage = () => {
       background: 'linear-gradient(180deg, #020617,#0f172a, #020617)',
       color: '#fff',
     }}>
+
+      <Box
+        sx={{
+          position: "absolute",
+          bottom: 30,
+          left: "50%",
+          transform: "translateX(-50%)",
+          color: "#fff",
+          textAlign: "center",
+          animation: "float 2s infinite",
+          zIndex: 4,
+          "@keyframes float": {
+            "0%": { transform: "translate(-50%, 0px)" },
+            "50%": { transform: "translate(-50%, 10px)" },
+            "100%": { transform: "translate(-50%, 0px)" },
+          },
+        }}
+      >
+        <Typography sx={{ fontSize: "0.8rem", letterSpacing: 2 }}>
+          DISCOVER MORE
+        </Typography>
+        <Typography sx={{ fontSize: "1.2rem" }}>↓</Typography>
+      </Box>
+
       {/* Hero Section */}
       <Box sx={{
         pt: '10px',
