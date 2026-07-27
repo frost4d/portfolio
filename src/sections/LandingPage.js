@@ -143,7 +143,7 @@ const LandingPage = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          zIndex: 1,
+          zIndex: 2,
           position: "relative"
         }}>
           <Box sx={{ width: "100%", maxWidth: 1200, height: 600, overflow: "hidden" }}>
