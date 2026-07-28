@@ -57,6 +57,7 @@ const LandingPage = () => {
           color: "#fff",
           textAlign: "center",
           animation: "float 2s infinite",
+          display: { xs: "none", md: "block" },
           zIndex: 4,
           "@keyframes float": {
             "0%": { transform: "translate(-50%, 0px)" },
@@ -171,7 +172,7 @@ const LandingPage = () => {
           position: "relative"
         }}>
           <Box sx={{ width: "100%", maxWidth: 1200, height: 600, overflow: "hidden" }}>
-            <Canvas dpr={[1, 1.5]} camera={{ position: [0, 1.5, 5], fov: 45 }}>
+            <Canvas dpr={[1, 1]} camera={{ position: [0, 1.5, 5], fov: 45 }}>
               <ambientLight intensity={1} />
               <directionalLight position={[5, 5, 5]} intensity={1} />
               <Suspense fallback={null}>
