@@ -5,6 +5,7 @@ import { keyframes } from '@mui/system';
 import { Canvas } from "@react-three/fiber";
 import { Environment, OrbitControls, Loader } from "@react-three/drei";
 import RobotModel from "../components/RobotModel";
+import NeonLand from '../components/NeonLand';
 
 const fadeUp = keyframes`
   0% { opacity: 0; transform: translateY(30px); }
@@ -47,6 +48,8 @@ const LandingPage = () => {
       background: 'linear-gradient(180deg, #020617,#0f172a, #020617)',
       color: '#fff',
     }}>
+
+      <NeonLand />
 
       <Box
         sx={{
