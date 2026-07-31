@@ -21,15 +21,24 @@ const designs = [
   'RealEstate.webp',
   'CoffeeMenu.webp',
   'YatchRental.webp',
-  // 'Yatch.webp',
-  // 'Coffee.webp',
-  // 'Mood.webp',
+  'LivingRoom1.webp',
+  'LivingRoom2.webp',
+  'LivingRoom3.webp',
+  'Brochure1.webp',
+  'Brochure2.webp',
+  'BUSINESSCARD.webp',
 ];
 
 const designLinks = [
   "https://frost4d.github.io/beach-club/",
   "https://frost4d.github.io/cosmetics-bento/",
   "https://app.notion.com/p/db4184d0c2b049e88b0ad01c36fc0288?v=4f0857e31bfb4232b6c8c23c7588fdbb&source=copy_link",
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
   null,
   null,
   null,
@@ -374,6 +383,142 @@ const PortfolioSection = () => {
       }}
     >
       BRAND LOGO DESIGN
+    </Typography>
+  </Box>
+)}
+
+{design === 'Brochure1.webp' && (
+  <Box
+    sx={{
+      position: 'absolute',
+      inset: 0,
+      zIndex: 5,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'flex-start',
+      p: 3,
+    }}
+  >
+    <Typography
+      sx={{
+        fontSize: '0.7rem',
+        color: '#38f5f8',
+        letterSpacing: 2,
+        mb: 1,
+      }}
+    >
+      REAL ESTATE BROCHURE
+    </Typography>
+
+    <Typography
+      sx={{
+        fontSize: '1.2rem',
+        fontWeight: 700,
+        mb: 1,
+      }}
+    >
+      Front Cover Design
+    </Typography>
+
+    <Typography
+      sx={{
+        fontSize: '0.85rem',
+        color: '#cbd5e1',
+        mb: 2,
+        lineHeight: 1.4,
+      }}
+    >
+      A sleek, modern front cover highlighting property imagery and branding, designed to capture attention and convey professionalism at first glance.
+    </Typography>
+  </Box>
+)}
+
+{design === 'Brochure2.webp' && (
+  <Box
+    sx={{
+      position: 'absolute',
+      inset: 0,
+      zIndex: 5,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'flex-start',
+      p: 3,
+    }}
+  >
+    <Typography
+      sx={{
+        fontSize: '0.7rem',
+        color: '#ec4899',
+        letterSpacing: 2,
+        mb: 1,
+      }}
+    >
+      REAL ESTATE BROCHURE
+    </Typography>
+    <Typography
+      sx={{
+        fontSize: '1.2rem',
+        fontWeight: 700,
+        mb: 1,
+      }}
+    >
+      Back Cover Design
+    </Typography>
+
+    <Typography
+      sx={{
+        fontSize: '0.85rem',
+        color: '#cbd5e1',
+        mb: 2,
+        lineHeight: 1.4,
+      }}
+    >
+      A clean back cover layout featuring contact details, branding elements, and a polished finish to reinforce trust and credibility.
+    </Typography>
+  </Box>
+)}
+{design === 'BUSINESSCARD.webp' && (
+  <Box
+    sx={{
+      position: 'absolute',
+      inset: 0,
+      zIndex: 5,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'flex-start',
+      p: 3,
+    }}
+  >
+    <Typography
+      sx={{
+        fontSize: '0.7rem',
+        color: '#a78bfa',
+        letterSpacing: 2,
+        mb: 1,
+      }}
+    >
+      BUSINESS CARD DESIGN
+    </Typography>
+
+    <Typography
+      sx={{
+        fontSize: '1.2rem',
+        fontWeight: 700,
+        mb: 1,
+      }}
+    >
+      Frostad Corporate Identity
+    </Typography>
+
+    <Typography
+      sx={{
+        fontSize: '0.85rem',
+        color: '#cbd5e1',
+        mb: 2,
+        lineHeight: 1.4,
+      }}
+    >
+      A professional business card concept balancing modern typography with brand colors, designed for clear communication and lasting impression.
     </Typography>
   </Box>
 )}
